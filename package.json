@@ -1,0 +1,22 @@
+{
+  "name": "serialize-simple",
+  "version": "0.0.1",
+  "description": "simple form serializer",
+  "main": "src/serialize.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "web": "cat src/serialize.js|grep -v export > test/serialize.js",
+	"postinstall": "npm run web"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://elboza@bitbucket.org/elboza/serialize-simple.git"
+  },
+  "keywords": [
+    "serialize",
+    "form"
+  ],
+  "author": "Fernando Iazeolla <fernando.iazeolla@f-secure.com>",
+  "license": "Beerware",
+  "homepage": "https://bitbucket.org/elboza/serialize-simple#readme"
+}
