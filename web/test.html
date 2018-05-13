@@ -16,7 +16,8 @@ foo
 function send_data(theform){
 	alert("test");
 	var x=new Serialize();
-	var params=x.serialize(theform);
+	var params=x.serialize(theform,'form' ,false);
+	//or params=x.serialize(theform, 'json');
 	alert(params);
 	return false;
 }

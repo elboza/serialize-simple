@@ -5,7 +5,7 @@
   "main": "src/serialize.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "web": "cat src/serialize.js|grep -v export > test/serialize.js",
+    "web": "cat src/serialize.js|grep -v export > web/serialize.js",
 	"postinstall": "npm run web"
   },
   "repository": {
