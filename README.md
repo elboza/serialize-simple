@@ -3,12 +3,45 @@
 
 You can use this module as a node module or directly inside a web page.
 
-### nodejs
+### as a nodejs module 
 ```
 npm install serialize-simple
 ```
+or
+```
+$ git clone <this repo>
+$ npm install
+```
+```
+var serialize=require('serialize.js');
+```
 
-### web page embedded
+### paremeters
+```
+serialize(domelement, encodetype = 'form', uriencode = null)
+```
+where
+- *domelement* is the dom element (document.getELementById('...'))
+- *encodetype* (optional)~~> 'form' (default)| 'json'
+- *uriencode* (optional) > true | false (if to URIencode values)
+
+### into a web page embedded
+```
+$ npm install
+```
+or
+```
+$ npm run web
+```
+to generate the files that you can include in a web page. either:
+
+- ./web/brainfucker.js
+- ./web/brainfucker.min.js
+and then just copy the file to your web project and link to it:
+```
+<script src="path_to_file/serialize.min.js"></script>
+```
+example:
 
 ```
 <html>
@@ -24,18 +57,32 @@ foo
 <input type="text" name="lastname" id="lastname" />
 <input type="submit" value="vai !!!" />
 </form>
-<script src="./serialize.js"></script>
+<script src="./serialize.min.js"></script>
 <script>
 function send_data(theform){
 	alert("test");
 	var x=new Serialize();
-	var params=x.serialize(theform);
+	var params=x.serialize(theform,'form');
+	//or params=x.serialize(theform, 'json');
 	alert(params);
 	return false;
 }
 </script>
 </body>
 </html>
+
+```
+
+### That's all falks!
+```
+ _____
+< bye >
+ -----
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
 
 ```
 

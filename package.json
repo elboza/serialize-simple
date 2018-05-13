@@ -5,18 +5,21 @@
   "main": "src/serialize.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "web": "cat src/serialize.js|grep -v export > web/serialize.js",
-	"postinstall": "npm run web"
+    "web": "mkdir -p web && cat src/serialize.js|grep -v export > web/serialize.js && uglifyjs web/serialize.js -c -m -o web/serialize.min.js",
+    "postinstall": "npm run web"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://elboza@bitbucket.org/elboza/serialize-simple.git"
+    "url": "git+https://github.com/elboza/serialize-simple.git"
   },
   "keywords": [
     "serialize",
     "form"
   ],
-  "author": "Fernando Iazeolla <fernando.iazeolla@f-secure.com>",
+  "author": "Fernando Iazeolla>",
   "license": "Beerware",
-  "homepage": "https://bitbucket.org/elboza/serialize-simple#readme"
+  "homepage": "https://github.com/elboza/serialize-simple.git",
+  "dependencies": {
+    "uglify-es": "^3.3.9"
+  }
 }

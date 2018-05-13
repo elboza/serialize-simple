@@ -11,12 +11,12 @@ foo
 <input type="text" name="lastname" id="lastname" />
 <input type="submit" value="vai !!!" />
 </form>
-<script src="./serialize.js"></script>
+<script src="./serialize.min.js"></script>
 <script>
 function send_data(theform){
 	alert("test");
 	var x=new Serialize();
-	var params=x.serialize(theform,'form' ,false);
+	var params=x.serialize(theform,'form');
 	//or params=x.serialize(theform, 'json');
 	alert(params);
 	return false;
