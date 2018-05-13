@@ -1,6 +1,6 @@
 {
   "name": "serialize-simple",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "simple form serializer",
   "main": "src/serialize.js",
   "scripts": {

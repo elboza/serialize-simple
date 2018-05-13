@@ -35,8 +35,9 @@ $ npm run web
 ```
 to generate the files that you can include in a web page. either:
 
-- ./web/brainfucker.js
-- ./web/brainfucker.min.js
+- ./web/serialize.js
+- ./web/serialize.min.js
+
 and then just copy the file to your web project and link to it:
 ```
 <script src="path_to_file/serialize.min.js"></script>
