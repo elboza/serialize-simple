@@ -22,7 +22,7 @@ serialize(domelement, encodetype = 'form', uriencode = null)
 ```
 where
 - *domelement* is the dom element (document.getELementById('...'))
-- *encodetype* (optional)~~> 'form' (default)| 'json'
+- *encodetype* (optional)~~> 'form' (default) | 'json'
 - *uriencode* (optional) ~~> true | false (if to URIencode values)
 
 ### into a web page embedded
